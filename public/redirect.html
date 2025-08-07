@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      margin: 50px;
+    }
+    #countdown {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h2>Please wait while we redirect you...</h2>
+  <div id="countdown">Redirecting in <span id="seconds">5</span> seconds...</div>
+
+  <!-- Adsterra Ads -->
+  <script type='text/javascript' src='//plugfundsbadger.com/80/4b/5c/804b5c4ad5ce3fdabc765f1ba3d18d6e.js'></script>
+  <script async="async" data-cfasync="false" src="//pl27246726.profitableratecpm.com/b9fc6b4087b23b5003123551a7697467/invoke.js"></script>
+  <div id="container-b9fc6b4087b23b5003123551a7697467"></div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const target = urlParams.get('target');
+    let seconds = 5;
+
+    const countdown = setInterval(() => {
+      seconds--;
+      document.getElementById("seconds").innerText = seconds;
+      if (seconds <= 0) {
+        clearInterval(countdown);
+        window.location.href = target;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
