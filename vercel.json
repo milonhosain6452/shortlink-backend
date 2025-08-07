@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/shorten.js", "use": "@vercel/node" },
+    { "src": "api/redirect.js", "use": "@vercel/node" },
+    { "src": "api/stats.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/shorten", "dest": "/api/shorten.js" },
+    { "src": "/api/redirect/(.*)", "dest": "/api/redirect.js" },
+    { "src": "/api/stats", "dest": "/api/stats.js" },
+    { "src": "/public/(.*)", "dest": "/public/redirect.html" }
+  ]
+}
